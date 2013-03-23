@@ -1,0 +1,54 @@
+2008-07-01  Matthew Kennedy
+
+	* selenium.lisp (with-selenium-session): New convenience method.
+	* iedoc.lisp (*selenium-driver-url*): Change value to Selenium RC default.
+
+2008-07-01  Matthew Kennedy
+
+	* iedoc.lisp (marshall-request): Change the result to an
+	associative list of parameters which can be passed to Drakma's
+	http-request function.  This way we don't have to do our own URL
+	encoding.  Thanks to Robin Lee Powell for noting this problem.
+
+2008-05-19  Matthew Kennedy
+
+	* iedoc.lisp, selenium.lisp: Apply patch from Chaitanya Gupta to
+	improve handling of return types.
+
+2008-01-24  Matthew Kennedy
+
+	* packages.lisp: Add documentation strings.
+
+2008-01-15  Matthew Kennedy
+
+	* selenium.lisp: Use define-iedoc to parse iedoc-0.8.3-1879.xml at
+	compile time.  Now you don't need selenium-core installed for the
+	API XML and cl-selenium works out of the box.
+
+2008-01-13  Sohail Somani
+	* selenium.lisp: Remove default path for define-iedoc and do not
+	call define-iedoc by default.
+	* packages.lisp: Export error conditions.
+	* iedoc.lisp: Add base-error, execution-error and http-error types
+	and raise them appropriately.
+	* iedoc-0.8.3-1879.xml: Add example xml file for version 0.8.3 of
+	Selenium core.
+
+2008-01-12  Sohail Somani
+	* packages.lisp: Export static API symbols.
+	* iedoc.lisp: URI encode parameters. Covert boolean results into
+	Lisp boolean objects.
+	* selenium.lisp: Export API symbols created through parsing of
+	iedoc.xml
+
+2008-01-12  Matthew Kennedy
+
+	* selenium.lisp: Apply patch from Sohail Somani which cleans up
+	do-get-new-browser-session and implements do-test-complete, which
+	is not found in the API XML.
+
+2008-01-05  Matthew Kennedy
+
+	* iedoc.lisp: Apply error handling and session ID patch from
+	Sohail Somani
+
