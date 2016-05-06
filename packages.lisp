@@ -1,7 +1,7 @@
 
 (defpackage #:selenium
   (:use #:common-lisp)
-  (:documentation "An interface to Selenium Remote Control.")
+  (:documentation "Selenium is a test tool for web applications. cl-selenium is a Common Lisp interface to Selenium.")
   (:export 
    #:*selenium-session*
    #:*selenium-driver-url*
